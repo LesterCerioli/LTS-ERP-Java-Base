@@ -6,6 +6,8 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import java.io.Serializable;
 import java.time.Instant;
 import javax.persistence.Column;
+
+import com.lts.ltsmscore.infrastructure.models.EntityBase;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
 
@@ -16,34 +18,34 @@ public class Address extends EntityBase {
 
 
     @StringLength(450)
-    private String contactName;
+    public String contactName;
 
     @StringLength(450)
-    private String phone;
+    public String phone;
 
     @StringLength(450)
-    private String addressLine1;
+    public String addressLine1;
 
     @StringLength(450)
-    private String addressLine2;
+    public String addressLine2;
 
     @StringLength(450)
-    private String city;
+    public String city;
 
     @StringLength(20)
-    private String zipCode;
+    public String zipCode;
 
-    private final long? DistrictId;
+    public long DistrictId;
 
-    private District district;
+    public District district;
 
-    private final long StateOrProvinceId;
+    public long StateOrProvinceId;
 
-    private StateOrProvince stateOrProvince;
+    public StateOrProvince stateOrProvince;
 
-    private StateOrProvincservices:
+    public StateOrProvincservices:
 
-    private long CountryId;
+    public long CountryId;
 
     public Address(String contactName, String phone, String addressLine1, String city, String zipCode) {
         this.contactName = contactName;

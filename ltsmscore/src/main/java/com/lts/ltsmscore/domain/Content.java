@@ -6,6 +6,7 @@ import java.time.Instant;
 import javax.persistence.Column;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
+import com.lts.ltsmscore.infrastructure.models.EntityBase;
 
 
 
@@ -34,7 +35,7 @@ public abstract class Content extends EntityBase {
 
     private String metaDescription;
 
-    private final boolean isPublished;
+    private boolean isPublished;
 
     public final DateTimeOffset? PublishedOn;
 
@@ -53,13 +54,13 @@ public abstract class Content extends EntityBase {
 
     private long createdById;
 
-    private final User CreatedBy;
+    private User CreatedBy;
 
     private final DateTimeOffset createdOn;
 
     private final DateTimeOffset latestUpdatedOn;
 
-    private final long latestUpdatedById;
+    private long latestUpdatedById;
 
     private User latestUpdatedBy;
 

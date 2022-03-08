@@ -1,6 +1,7 @@
 package com.lts.ltsmscore.domain;
 
 import java.util.Date;
+import com.lts.ltsmscore.infrastructure.models.EntityBase;
 
 public class District extends EntityBase {
 
